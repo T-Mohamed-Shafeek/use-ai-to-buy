@@ -80,7 +80,9 @@ use-ai-to-buy/
 └── utils/               # Utility functions
     ├── ai.py
     ├── formatting.py
+    ├── sample_data.py
     └── session_state.py
 ```
+3. You can make use of the fake data I have given in `utils/sample_data.py` to test each features.
 
 By Mohamed Shafeek T
