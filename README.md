@@ -31,7 +31,7 @@ An intelligent web application that helps users make informed decisions when buy
 1. Clone the repository:
 ```bash
 git https://github.com/T-Mohamed-Shafeek/use-ai-to-buy.git
-cd poc
+cd use-ai-to-buy
 ```
 
 2. Create a virtual environment:
