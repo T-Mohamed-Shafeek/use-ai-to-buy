@@ -63,6 +63,7 @@ streamlit run app.py
 
 ```
 use-ai-to-buy/
+├── pics/ 
 ├── app.py                 # Main application file
 ├── requirements.txt       # Python dependencies
 ├── .env                  # Environment variables
