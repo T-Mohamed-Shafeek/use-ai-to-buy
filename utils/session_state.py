@@ -49,4 +49,8 @@ def initialize_session_state():
     if 'chat_history' not in st.session_state:
         st.session_state.chat_history = []
     if 'chat_loading' not in st.session_state:
-        st.session_state.chat_loading = False 
+        st.session_state.chat_loading = False
+        
+    # Guide Page
+    if 'guide_visited' not in st.session_state:
+        st.session_state.guide_visited = False 

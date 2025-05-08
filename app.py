@@ -9,6 +9,7 @@ from routes.model_comparison import model_comparison_page
 from routes.car_browser import car_browser_page
 from routes.ai_insights import ai_insights_page
 from routes.fine_print_analyzer import fine_print_analyzer_page
+from routes.guide import guide_page
 from utils.session_state import initialize_session_state
 
 load_dotenv()
@@ -125,6 +126,25 @@ st.markdown("""
     .cta-btn:hover {
         background: linear-gradient(90deg, #818cf8 0%, #a78bfa 100%);
     }
+    .guide-button {
+        background: linear-gradient(90deg, #a78bfa 0%, #818cf8 100%);
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        padding: 1.1rem 2.5rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+        box-shadow: 0 2px 12px #818cf822;
+        cursor: pointer;
+        transition: background 0.2s;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        display: block;
+    }
+    .guide-button:hover {
+        background: linear-gradient(90deg, #818cf8 0%, #a78bfa 100%);
+    }
     </style>
     """, unsafe_allow_html=True)
 
@@ -150,6 +170,8 @@ elif st.session_state.user_choice == "ai_insights":
     ai_insights_page()
 elif st.session_state.user_choice == "fine_print_analyzer":
     fine_print_analyzer_page()
+elif st.session_state.user_choice == "guide":
+    guide_page()
 else:
     # Top headline and subheadline
     st.markdown("""
@@ -199,11 +221,38 @@ else:
     # CTA button
     st.markdown("""
     <div style='display:flex; justify-content:center; margin-top:2.5rem; margin-bottom:2.5rem;'>
-        <button style='background:#a78bfa; color:#fff; border:none; border-radius:12px; padding:1.1rem 2.5rem; font-size:1.1rem; font-weight:700; box-shadow:0 2px 12px #818cf822; cursor:pointer;'>
-            <span style='font-size:1.2rem; margin-right:0.7rem;'>❓</span>How to Get the Most Out of Our Site
-        </button>
     </div>
     """, unsafe_allow_html=True)
+
+    # Style the button using custom CSS
+    st.markdown("""
+    <style>
+    .guide-button {
+        background: linear-gradient(90deg, #a78bfa 0%, #818cf8 100%);
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        padding: 1.1rem 2.5rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+        box-shadow: 0 2px 12px #818cf822;
+        cursor: pointer;
+        transition: background 0.2s;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        display: block;
+    }
+    .guide-button:hover {
+        background: linear-gradient(90deg, #818cf8 0%, #a78bfa 100%);
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+    # Add the styled button
+    if st.button("❓ How to Get the Most Out of Our Site", key="guide_button", use_container_width=True):
+        st.session_state.user_choice = "guide"
+        st.rerun()
 
     # Four AI tool cards below
     st.markdown("<div style='margin-bottom:1.5rem;'></div>", unsafe_allow_html=True)
