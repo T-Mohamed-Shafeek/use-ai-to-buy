@@ -88,4 +88,4 @@ use-ai-to-buy/
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-- Mohamed Shafeek T
+By Mohamed Shafeek T
