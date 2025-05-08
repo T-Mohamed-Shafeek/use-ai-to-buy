@@ -67,7 +67,6 @@ use-ai-to-buy/
 ├── requirements.txt       # Python dependencies
 ├── .env                  # Environment variables
 ├── .gitignore           # Git ignore file
-├── LICENSE              # MIT License
 ├── README.md            # Project documentation
 ├── routes/              # Route handlers
 │   ├── ai_assistant.py
@@ -82,10 +81,5 @@ use-ai-to-buy/
     ├── formatting.py
     └── session_state.py
 ```
-
-
-## License 📝
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 By Mohamed Shafeek T
